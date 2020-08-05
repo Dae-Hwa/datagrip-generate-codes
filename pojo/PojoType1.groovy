@@ -36,8 +36,8 @@ def generate(out, className, fields) {
   out.println "public class $className {"
   out.println ""
   fields.each() {
+    out.print "  private ${it.type} ${it.name};"
     if (it.annos != "") out.println "  ${it.annos}"
-    out.println "  private ${it.type} ${it.name};"
   }
   out.println ""
   fields.each() {
