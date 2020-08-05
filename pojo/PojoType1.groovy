@@ -11,7 +11,7 @@ import com.intellij.database.util.DasUtil
 
 packageName = "com.sample;"
 typeMapping = [
-  (~/(?i)int/)                      : "long",
+  (~/(?i)int|numeric/)              : "long",
   (~/(?i)float|double|decimal|real/): "double",
   (~/(?i)datetime|timestamp/)       : "java.sql.Timestamp",
   (~/(?i)date/)                     : "java.sql.Date",
