@@ -61,7 +61,7 @@ def calcFields(table) {
     fields += [[
                  name : javaName(col.getName(), false),
                  type : typeStr,
-                 annos: ""]]
+                 annos: col.comment ? """// $col.comment""" : "" ]]
   }
 }
 
